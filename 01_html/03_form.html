@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form tag의 종류</title>
+  </head>
+  <body>
+    <!-- form 태그는 사용자의 입력을 받는 요소들을 묶어주는 태그 -->
+    <!-- form태그의 속성 :action, method-> 서버와의 통신과 관련된 속성-> 일단 넘어가요 -->
+    <!-- 사용자의 입력을 위한 태그를 form태그 내부에 작성-> 서버에 전달 -->
+    <>
+      <!-- input 사용자의 입력을 받는 태그 -->
+      <!-- 다양한 type 속성이 있음 -->
+      <!-- input은 열린태그(닫는 태그x)이기 때문에 꼭 / 닫아주기 -->
+      text :
+      <input type="text" />
+      <br />
+      <!-- label 태그란 -->
+      <!-- for 속성을 사용해 input태그와 연결할 수 있는 태그 -->
+      <!-- 해당 label을 클릭할 경우 연결된 input에 focus하거나 체크할 수 있음-> 사용자 편의성 높임 -->
+      <!-- label의 for와 input의 id가 동일하면 연결됨 -->
+      <!-- label과 함께 쓸 경우 -->
+
+      <label for="a">text with label :</label>
+      <input type="text" id="a" />
+      <label for="email">이메일</label>
+      <!-- placeholder :에시 텍스트 입력 (연한 회색, 값이 들어가면 안보임) -->
+
+      <input type="email" id="email" placeholder="example@aa.co.kr" />
+      <br />
+
+      <!-- label for속성을 사용하지 않고 암시적으로 연결하는 방법 -->
+      <label>
+        비밀번호
+        <input type="password" />
+      </label>
+      <br />
+
+      <input type="checkbox" />동의합니다.
+      <br />
+      <input type="checkbox" id="agree" />
+      <label for="agree">동의합니다.</label>
+
+      <input type="checkbox" id="agree1" disabled />
+      <label for="agree">동의합니다.</label>
+
+      <br />
+
+      <h5>다음 중 input type이 아닌 것은?</h5>
+
+      <input type="checkbox" name="input-checkbox" id="text3" />
+      <label for="text3"> text</label>
+
+      <input type="checkbox" id="click" />
+      <label for="click">click</label>
+
+      <input type="checkbox" id="bread" />
+      <label for="bread"> bread</label>
+
+      <input type="checkbox" id="img" />
+      <label for="img"> img</label>
+
+      <input type="checkbox" id="date" />
+      <label for="date"> date</label>
+
+      <br />
+
+      <input type="radio" id="radio" />
+      <label for="radio">radio type1</label>
+
+      <input type="radio" id="radio2" />
+      <label for="radio2">radio type2</label>
+
+      <input type="radio" id="radio3" />
+      <label for="radio3">radio type3</label>
+
+      <input type="radio" id="radio4" />
+      <label for="radio4">radio type4</label>
+
+      <br />
+
+      <input type="radio" name="radio" id="radio11" />
+      <label for="radio11">radio type1</label>
+
+      <input type="radio" name="radio" id="radio22" />
+      <label for="radio22">radio type2</label>
+
+      <input type="radio" name="radio" id="radio33" />
+      <label for="radio33">radio type3</label>
+
+      <input type="radio" name="radio" id="radio44" />
+      <label for="radio44">radio type4</label>
+      <br />
+
+      <label for="color">색상을 선택해주세요.</label>
+      <input type="color" id="color" />
+      <br />
+
+      <label for="range">범위를 지정해주세요.</label>
+      <input type="range" id="range" />
+      <br />
+
+      <label for="file">파일을 업로드해 주세요.</label>
+      <input type="file" id="file" />
+
+      <!--number type은 input 창 내부에 숫자 이외의 값이 입력되지 않음  -->
+      <!-- input 창 내부 오른편에 count값을 변경시키는 화살표 자동으로 생성 -->
+      <label for="number">숫자를 입력해 주세요.</label>
+      <input type="number" id="number" />
+      <br />
+
+      <label for="date ">생년월일을 입력해 주세요.</label>
+      <input type="date" id="date" />
+      <br />
+
+      <label for="date-time">생년월일을 입력해 주세요.(시간)</label>
+      <input type="datetime-local" />
+      <br />
+
+      <!-- 버튼만들기 -->
+      <!--  방법 1. input태그의 button type-->
+      <!-- 열린 태그 이기 때문에 내부에 자식요소를 만들수 없음 -->
+      <!--  버튼 내부의 contents는 value 속성을 사용해 부여-->
+
+      <input type="button" value="버튼" />
+      <input type="submit" value="승인" />
+      <br />
+
+      <!-- 방법2. input 태그의 submit type -->
+      <!-- vaule를 지정하지 않아도 기본적으로 "제출이라는 값이 들어감" -->
+      <!-- form태그 내의 모든 input 값을 서버에 전송(javascript 없이) -->
+
+      <!--  방법3. button태그 사용-->
+      <!--  여는 태그와 닫는 태그가 있어 자유롭게 스타일링 및 활용 가능-->
+      <button>
+        button태그로 만든 버튼
+        <div style="color: red">난 div</div>
+      </button>
+      <br />
+
+      <!-- cols가로너비속성 -->
+      <!-- rows세로 너비속성 -->
+      <label for="textarea">많은 양의 텍스트를 받을 때 사용하는 textarea</label>
+      <br />
+      <textarea
+        id="textarea"
+        cols="30"
+        rows="10"
+        placeholder="내용을 입력해주세요"
+      ></textarea>
+      <br /><br /><br />
+
+      <select name="fruit">
+        <opt label="red">빨강</opt>
+        <optgroup>
+          <option value="apple">사과</option>
+          <option value="strawberry">딸기</option>
+          <option value="cherry">체리</option>
+        </optgroup>
+        <optgroup>
+          <opt label="others">그 외</opt>
+          <option value="kiwi">키위</option>
+          <option value="banana">바나나</option>
+          <option value="orange">오렌지</option>
+        </optgroup>
+      </select>
+
+      <h2>제출용 폼 만들기 실습</h2>
+      <br />
+
+      <h4><b>설문조사</b></h4>
+      <br />
+
+      <label for="name01">이름 :</label>
+      <input type="text" id="name01" />
+      <br />
+      <label for="email01">이메일 :</label>
+      <input type="text" id="email01" placeholder="example@aa.co.kr" />
+      <br />
+
+
+      <h4><b>나이</b></h4>
+     
+      <input type="radio" name="radio" id="age10" />
+      <label for="age10">10대</label>
+
+      <input type="radio" name="radio" id="age20" />
+      <label for="age20">20대</label>
+
+      <input type="radio" name="radio" id="age30" />
+      <label for="age30">30대</label>
+
+      <input type="radio" name="radio" id="age40" />
+      <label for="age40">40대</label>
+
+      <input type="radio" name="radio" id="age50" />
+      <label for="age50">50대</label>
+
+      <input type="radio" name="radio" id="ag60" />
+      <label for="age60">60대</label>
+      <br />
+
+      <h4><b>원하는 강의(복수응답 가능합니다.)</b></h4>
+
+      <input type="checkbox" id="html">
+      <label for="html">html</label>
+
+      <input type="checkbox" id="javascript">
+      <label for="javascript">javascript</label>
+
+      <input type="checkbox" id="css">
+      <label for="css">css</label>
+      <br />
+
+      <textarea
+        id="textarea2"
+        cols="80"
+        rows="10"
+        placeholder="하고싶은 말을 해주세요."
+      ></textarea>
+      <input type="submit" value="제출" />
+
+
+
+
+    </form>
+  </body>
+</html>
