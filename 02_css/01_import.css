@@ -1,0 +1,17 @@
+li {
+  background-color: cornflowerblue;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+}
+
+p {
+  background-color: orange;
+  color: white;
+}
