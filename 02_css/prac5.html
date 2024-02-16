@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>속성 선택자 실습</title>
+    <style>
+      input {
+        background-color: pink; !important
+      }
+      /* !important 작성시 해당 스타일링이 무조건적으로 반영 */
+      [disabled] {
+        background-color: red;
+      }
+
+      [value] {
+
+        background-color: blue;
+      }
+
+      [placeholder="이름"] {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" placeholder="이름" />
+    <input type="password" value="pw" />
+    <input type="text" value="000-0000-0000" />
+    <input type="text" placeholder="핸드폰" />
+    <input type="text" placeholder="주민번호" disabled />
+  </body>
+</html>

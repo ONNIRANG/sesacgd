@@ -1,0 +1,26 @@
+.style01 {
+  color: red;
+}
+
+table {
+  background-color: rgb(253, 255, 198);
+  opacity: 0.8;
+  width: 100%;
+  height: 640px;
+  margin: 10px;
+  padding: 30px;
+}
+
+caption {
+  color: green;
+  background-color: rgb(253, 255, 198);
+  opacity: 0.8;
+}
+
+td {
+  text-align: right;
+}
+
+.style02 {
+  color: blue;
+}

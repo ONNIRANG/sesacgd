@@ -1,0 +1,33 @@
+.product-info {
+  height: 300px;
+}
+
+.product-info-detail {
+  width: 100%;
+  height: 300px;
+  background-color: blanchedalmond;
+  position: fixed;
+}
+
+.fixed-tab {
+  float: right;
+  margin: 0;
+}
+
+.fixed-tab {
+  float: right;
+  margin: 0;
+}
+
+.fixed-tab > li {
+  float: left;
+}
+
+.fixed-tab > li > a {
+  display: inline-block;
+  width: 180px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0 40px 0;
+}

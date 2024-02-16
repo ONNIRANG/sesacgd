@@ -1,0 +1,29 @@
+header .header {
+  width: 1400px;
+  height: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: white;
+  border-bottom: 1px rgba(197.31, 197.31, 197.31, 0.6) solid;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+header .logo-outline {
+  width: 192px;
+  height: 45px;
+  position: relative;
+}
+
+header .logo-inside {
+  width: 189.53px;
+  height: 29.8px;
+  left: 1.87px;
+  top: 13.33px;
+  position: absolute;
+  background: black;
+}

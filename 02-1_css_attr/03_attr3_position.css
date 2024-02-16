@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  position: 0;
+  background: linear-gradient(white, orange);
+  height: 3000px;
+}
+
+div {
+  width: 100px;
+  height: 100px;
+  font-weight: 700px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* position: static;  (default)*/
+/* 
+-기본값이기 때문에 작성하지 않아도 됨(주석처리하던않하던 결과동일 */
+/* inline요소라면 왼쪽에서 오른쪽으로 쌓임 */
+/* block 요소라면 위에서 아래로 쌓임 */
+/*  top, rigth, left, bottom 적용 안됨*/
+
+.position-static {
+  /* position : static; */
+  background-color: pink;
+}
+
+/* position: relative;-> 상대위치 */
+/* 일반적인 흐름에 따라 배치를 하되, top, bottom, left, right속성을 사용해 위치 지정 */
+/* 자신이 원래 있어야 하는 위치 기준
+  -top:위로부터의 여백
+  -bottom아래로부터의 여백
+  -right오른쪽으로 부터의 여백
+  -left왼쪽으로 부터의 여백
+   */
+/* 자기의 자리를 벗어나도 원래 자리가 비어 있음-> 문서의 흐름을 깨지 않음 */
+.position-relative {
+  background-color: lightblue;
+  position: relative;
+  /* left: 100px; */
+  /* top: 50px; */
+  bottom: 30px;
+  right: 15px;
+}
+
+/* position absolute;-> 절대위치 */
+/* 
+기준점
+-position : static이 아닌 값을 가지는 제일 가까운 조상 기준
+-만일 position: static이 아닌 값을 가진 조상이 없다면 viewport를 기준
+-특정 요소를 기준 삼아 top,bottom, left, rigth속성을 지정함
+*/
+/* 문서흐름을 벗어남-> 자기 자리가 사라짐 */
+
+.position-absolute {
+  background-color: gold;
+  position: absolute;
+  top: 0;
+}
+
+/* position: fixed;-> 고정위치 */
+
+/* 
+-viewport기준 특정위치에 배치
+-스크롤되어도 움직이지 않음-> header, top-bottom제작시 많이 사용 
+*/
+/* top, bottom, right, left중 하나를 사용 */
+
+.position-fixed {
+  background-color: coral;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
+
+/* position: sticky;-> top속성의 위치에 도달했을 때 부터 해당 위치에 고정
+내부모를 기준으로만 sticky가된다. */
+/* 부모 요소 내에서만 sticky로 작동함-> html구조 매우 중요 */
+.position-sticky {
+  background-color: palegreen;
+  position: sticky;
+  top: 0;
+  /* 뷰포트 최상단에 도달했을 때 고정 */
+}
+
+.sticky-container {
+  height: 1200px;
+  width: 100vw;
+  background: linear-gradient(lightblue, pink);
+  position: sticky;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  background-color: brown;
+  position: relative;
+}
+
+.item1,
+.item2,
+.item3 {
+  width: 100px;
+  height: 100px;
+}
+.item2 {
+  right: 30px;
+  bottom: 100px;
+  background-color: aquamarine;
+  position: absolute;
+}
+
+.item1 {
+  position: relative;
+  background-color: yellow;
+  top: 30px;
+  left: 50px;
+}
+
+.item3 {
+  position: fixed;
+  right: 100px;
+  top: 100px;
+  background-color: aqua;
+}
+
+.parent {
+  position: relative;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle1 {
+  background-color: #9afaff;
+  top: 0;
+  left: 200px;
+}
+
+.circle2 {
+  background-color: #84ff8d;
+  top: 0;
+  left: 150px;
+}
+
+.circle3 {
+  background-color: #ffeb88;
+  top: 0;
+  left: 100px;
+  z-index: 3;
+}
+
+.circle4 {
+  background-color: #ffb680;
+  top: 0;
+  left: 50px;
+  z-index: 2;
+}
+
+.circle5 {
+  top: 0;
+  left: 0;
+  background-color: #ff7c7c;
+}
+
+.container01 {
+  width: 500px;
+  height: 500px;
+  background-color: #ffb680;
+  position: relative;
+}
+
+.container > * {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.item02 {
+  top: 30px;
+  left: 30px;
+  position: absolute;
+
+  background-color: #9afaff;
+}
+
+.item03 {
+  top: 60px;
+  left: 60px;
+  position: absolute;
+  background-color: #84ff8d;
+  z-index: 2;
+}
+
+.item01 {
+  background-color: blue;
+  z-index: 3;
+}
