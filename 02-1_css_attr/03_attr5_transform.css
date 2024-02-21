@@ -1,0 +1,121 @@
+.image-box {
+  background-color: lightblue;
+  width: 400px;
+  height: 250px;
+}
+
+img {
+  width: 100%;
+  /* 부모 너비가 400px이므로 width 400px이 됨 */
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid gold;
+}
+
+img:hover {
+  /* 1.skew()
+  - 원하는 각도만큼 요소를 기울임
+  - x축 y축 나우어 속성 부여 가능
+  -skewX(X_deg)
+  -skewY(Y_deg)
+  - x,y축 동시 사용 원할 때
+  -skew(x_Deg,y_deg)
+  */
+  transform: skewX(30deg);
+  transform: skewY(30deg);
+  transform: skew(30deg, 30deg);
+  /* 2. scale() 
+  -크기를 조정함(확대, 축소)
+  -1보다 큰 값: 해당 배수만큼 확대
+  -0~1: 해당 배수만큼 축소
+  */
+  transform: scaleX(2);
+  transform: scaleY(0.5);
+  transform: scale(0.5, 2);
+
+  /* 3. translate()
+  -요소를 이동
+  -translatex():x축을 기준으로 이동 
+  -translatey():y축을 기준으로 이동 
+  -translatez():z축을 기준으로 이동 
+  -translate():xy축을 기준으로 이동 
+   */
+  transform: translateX(100px);
+  transform: translateY(-100px);
+  /* z축 변화는 perspective를 사용하지 않을 경우 확인 불가 */
+  transform: perspective(500px) translateZ(100px);
+
+  /* 2개일 때 단축 속성 */
+  transform: translate(100px, 100px);
+  transform: translate(100px, -100px);
+  /* 3개일때 단축속성 translate3d()로 작성해야 함 */
+  transform: translate3d(100px, 100px, 100px) perspective(500px);
+
+  /* 4.rotate()
+-회전
+-주어진 각도만큼 회전
+-rotatex(): x축을 기준으로 회전
+-rotatey():y축 기준으로 회전
+-rotate(): 시계방향으로 회전 */
+  transform: rotate(45deg);
+  transform: rotatex(45deg) perspective(500px);
+  transform: rotatey(45deg) perspective(500px);
+
+  transform: rotateX(180deg) perspective(500px);
+  /* 뒷면 보임 여부 */
+  backface-visibility: visible;
+}
+
+/* transition */
+/* transition은 변화가 일어 날 때 사용하는 속성 */
+/* 
+tansition:프로퍼티 값 변경시, 일정시간에 걸쳐 변화가 일어나도록 함
+-transition-property: 변화 대상 css속성 지정(default: all)
+-transition-duration: 변화가 일어날 시간(단위:s)
+-transtion-timing-function: 변화 시간별 속도지정(default:ease)
+-ease: 천천히 시작-> 빨라짐-> 느려짐 기능
+-linear: 속도가 일정
+-ease in: 천천히 시작-> 정상속도
+ -ease out: 정상속도 -> 천천히 끝남
+ -ease-in-out: 천천히 시작-> 정상속도 -> 느려짐
+ -transition-delay : 지연시간(단위s)
+ */
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-color: black;
+  /* transition 단축속성은 지속시간만 작성 가능 */
+  /* property: all / thing-function: ease /delay: 0s가 기본으로 지정됨 */
+  /* 변화를 1초동안 하겠다. */
+  transition: 1s;
+}
+
+.box1:hover {
+  background-color: pink;
+  height: 120px;
+  width: 120px;
+  /* transition-duration: 1s; 
+  transition-timing-function: ease-in;
+  transition-delay: 1s;
+  transition-property: scale;
+  */
+
+  /* 단축속성 */
+  /* 순서가 중요 */
+  /* transition: property duration timing-function delay */
+  /* property에 작성된 css속성만 transition이 적용됨 */
+  /* width, height는 호버하자마자 변하지만 배경색은 1초 뒤에 1초동안 ease-in 속도로 분홍색으로 변화  */
+  transition: background-color 1s ease-in 1s;
+}
+
+.box2:hover {
+  background-color: aqua;
+  /* x축으로 200px이동, x 축으로 2배 확대  */
+  transform: translateX(200px) scaleX(2);
+}
+
+.box3:hover {
+  opacity: 0;
+}
