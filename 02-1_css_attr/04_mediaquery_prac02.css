@@ -31,21 +31,58 @@ header .inner .logo {
   color: aliceblue;
 }
 
+header .inner .menu {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .inner .menu li {
+  margin-right: 20px;
+}
+
 .small-menu,
-.menu-bar {
+.inner .menu-bar {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
   .small-menu,
-  .menu-bar {
+  .inner .menu-bar {
     display: block;
   }
 
-  .menu {
+  header .inner .logo {
+    left: calc(50%-25px);
+  }
+
+  header .menu-bar {
+    position: absolute;
+    font-size: 30px;
+    line-height: 100px;
+    right: 5%;
+  }
+
+  header .small-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  header .small-menu li {
+    background-color: aliceblue;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+  }
+
+  header .small-menu li:hover {
+    background-color: blue;
+    color: white;
+  }
+
+  header .inner .menu {
     display: none;
   }
-}
-
-@media screen and (min-width: 768px) {
 }
