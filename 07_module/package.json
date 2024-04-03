@@ -1,0 +1,5 @@
+{
+  "type": "module",
+  "comment": "commonjs모듈 사용할 땐 type:commonjs사용",
+  "comment2": "es6모듈을 사용할 때 type : module 사용"
+}
