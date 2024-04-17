@@ -1,0 +1,12 @@
+import {useState} from 'react;
+
+export default function Prac3() {
+  const [display, setDisplay] = useState(true);
+
+  return (
+  <>
+  <button>{display ? '사라져라' : '보여라'}</button>
+    {display && <h2>안녕하세용!</h2>}
+  </>
+  );
+}
